@@ -17,7 +17,7 @@ FLAGS 	= -Wall -Wextra -Werror
 # 	ar rc libft.a $(SRC)/*.o $(INCLUDE)/*.h
 
 all:
-	$(CC) $(FLAGS) test.c -o test
+	$(CC) $(FLAGS) main.c -o main
 
 # libft: $(OBJS)
 

@@ -14,8 +14,8 @@ Para o projeto há as seguintes restrições:
 
 |ID|Função|Reescrita|
 |---|---|---|
-|01|memset||
-|02|bzero| |
+|01|memset|X|
+|02|bzero|X|
 |03|memcpy|X|
 |04|memccpy|X|
 |05|memmove| |
