@@ -16,8 +16,8 @@ Para o projeto há as seguintes restrições:
 |---|---|---|
 |01|memset||
 |02|bzero| |
-|03|memcpy| |
-|04|memccpy| |
+|03|memcpy|X|
+|04|memccpy|X|
 |05|memmove| |
 |06|memchr| |
 |07|memcmp| |
