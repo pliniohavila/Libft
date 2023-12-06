@@ -1,6 +1,7 @@
 # local variables
 CC		= gcc
 FLAGS 	= -Wall -Wextra -Werror
+# -fsanitize=address
 
 # folders 
 # INCLUDE = ./includes

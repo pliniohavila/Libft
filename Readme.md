@@ -22,7 +22,7 @@ Para o projeto há as seguintes restrições:
 |06|memchr|X|
 |07|memcmp|X|
 |08|strlen|X|
-|09|strlcpy| |
+|09|strlcpy|X|
 |10|strlcat| |
 |11|strchr| |
 |12|strrchr| |
