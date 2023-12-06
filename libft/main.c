@@ -13,51 +13,25 @@ int     main(void)
     memset(buf1, 0, SIZE);
     // memset(buf2, 0, SIZE);
     strcpy(buf1, "Chiquita and Mel!");
-    ft_memmove(buf1 + 4, buf1, 8);
-    printf("%s\n", buf1);
-
+    printf("memchr: %s\n", (char*)memchr(buf1, 'a', strlen(buf1)));
+    printf("ft_memchr: %s\n", (char*)ft_memchr(buf1, 'a', strlen(buf1)));
     return (0);
 }
 
-void    *ft_memcpy(void *dest, void *src, size_t n)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char    *cdest;
-    unsigned char    *csrc;
-    size_t  i;
+    const unsigned char     *buf;
+    unsigned char           cmp;
+    size_t                  i;
 
-    if ((!dest) && (!src))
-        return (NULL);
-    cdest = (unsigned char*)dest;
-    csrc = (unsigned char*)src;
+    buf = (unsigned char*)s;
+    cmp = (unsigned char)c;
     i = 0;
     while (i < n)
     {
-        cdest[i] = csrc[i];
+        if (buf[i] == cmp)
+            return ((void*)s + i);
         i++;
     }
-    return (dest);
-}
-
-void    *ft_memmove(void *dest, void *src, size_t n)
-{
-    unsigned char    *cdest;
-    const unsigned char    *csrc;
-
-    if ((!dest) && (!src))
-        return (dest);
-    cdest = (unsigned char*)dest;
-    csrc = (unsigned char*)src;
-    if ((dest > src) && (dest < src + n))
-    {
-        cdest += n - 1;
-        csrc += n - 1;
-        while (n--)
-            *cdest-- = *csrc--;
-    }
-    else
-    {
-        while (n--)
-            *cdest++ = *csrc++;
-    }
-    return (dest);
+    return (NULL);
 }
