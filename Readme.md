@@ -23,7 +23,7 @@ Para o projeto há as seguintes restrições:
 |07|memcmp|X|
 |08|strlen|X|
 |09|strlcpy|X|
-|10|strlcat| |
+|10|strlcat|X|
 |11|strchr| |
 |12|strrchr| |
 |13|strnstr| |
@@ -41,7 +41,6 @@ Para o projeto há as seguintes restrições:
 | |||
 
 ## 2.º Parte
-
 
 |ID|Função|Reescrita|
 |---|---|---|
