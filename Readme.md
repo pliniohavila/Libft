@@ -19,9 +19,9 @@ Para o projeto há as seguintes restrições:
 |03|memcpy|X|
 |04|memccpy|X|
 |05|memmove|X|
-|06|memchr| |
-|07|memcmp| |
-|08|strlen| |
+|06|memchr|X|
+|07|memcmp|X|
+|08|strlen|X|
 |09|strlcpy| |
 |10|strlcat| |
 |11|strchr| |
