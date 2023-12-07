@@ -1,35 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-// #include <bsd/string.h>
 #include "libft.h"
 
-#define SIZE 30
-
-
-int     main(void)
-{
-    char    buf1[SIZE];
-    // char    buf2[SIZE];
-
-    memset(buf1, 0, SIZE);
-    // memset(buf2, 0, 10);
-    strcpy(buf1, "Chiquita and Mel!");
-    // ft_strlcpy(buf1, "Chiquita ", SIZE);
-    // ft_strlcpy(buf2, "and Mel!", SIZE);
-    printf("[INFO]: %s\n", ft_strnstr(buf1, "and", ft_strlen(buf1)));
-    // printf("[INFO]: %s\n", strnstr(buf1, "and", 5));
-    return (0);
-}
-
-size_t      ft_strlen(const char *s)
-{
-    size_t      i;
-
-    i = 0;
-    while (*s++)
-        i++;
-    return(i);
-}
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
