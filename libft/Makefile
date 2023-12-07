@@ -1,6 +1,6 @@
 # local variables
 CC		= gcc
-FLAGS 	= -Wall -Wextra -Werror -lbsd
+FLAGS 	= -Wall -Wextra -Werror
 # -lbsd
 # -fsanitize=address
 

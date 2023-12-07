@@ -27,7 +27,7 @@ Para o projeto há as seguintes restrições:
 |11|strchr|X|
 |12|strrchr|X|
 |13|strnstr|X|
-|14|strncmp| |
+|14|strncmp|X|
 |15|atoi| |
 |16|isalpha| |
 |17|isdigit| |

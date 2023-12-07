@@ -14,5 +14,6 @@ size_t  ft_strlcat(char *dst, const char *src, size_t n);
 char    *ft_strchr(const char *s, size_t c);
 char    *ft_strrchr(const char *s, size_t c);
 char    *ft_strnstr(const char *big, const char *little, size_t len);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif                    
