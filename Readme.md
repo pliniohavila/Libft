@@ -24,8 +24,8 @@ Para o projeto há as seguintes restrições:
 |08|strlen|X|
 |09|strlcpy|X|
 |10|strlcat|X|
-|11|strchr| |
-|12|strrchr| |
+|11|strchr|X|
+|12|strrchr|X|
 |13|strnstr| |
 |14|strncmp| |
 |15|atoi| |
