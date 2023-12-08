@@ -2,4 +2,6 @@
 *.so
 *.o
 ./vscode
+/vscode
+.vscode
 /libftTester

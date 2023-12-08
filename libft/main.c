@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include "libft.h"
 
 #define SIZE 30
@@ -12,9 +13,11 @@ int     main(void)
 
     memset(buf1, 0, SIZE);
     // memset(buf2, 0, SIZE);
-    strcpy(buf1, "Chaquita");
-    // strcpy(buf2, "Chiquita");
-    printf("[INFO]: %d\n", strncmp(buf1, buf1, 0));
+    strcpy(buf1, "Aa-20 \nT5;9z");
+    // strcpy(buf2, "Chiquita"); 
+    printf("Check[%c]: %d\n", buf1[0], ft_isprint(buf1[0]));
+
+    // printf("[INFO]: %d\n", strncmp(buf1, buf1, 0));
     // printf("[INFO]: %d\n", ft_strncmp(buf1, buf1, 0));
     return (0);
 }
@@ -29,24 +32,51 @@ size_t      ft_strlen(const char *s)
     return(i);
 }
 
-int     ft_strncmp(const char *s1, const char *s2, size_t n)
+int     ft_isupper(int c)
 {
-    size_t      i;
-
-    if (!s1 || !s2)
-        return (0);
-    if (ft_strlen(s1) == 0 && ft_strlen(s2) > 0)
-        return (-1);
-    if (ft_strlen(s1) > 0 && ft_strlen(s2) == 0)
+    if ((c >= 65) && (c <= 90))
         return (1);
-    i = 0;
-    while ((i < n) && (s1[i] != '\0'))
-    {
-        if (s1[i] > s2[i])
-            return (1);
-        if (s1[i] < s2[i])
-            return (-1);
-        i++;
-    }
-    return(0);
+    return (0);
+}
+
+int     ft_islower(int c)
+{
+    if ((c >= 97) && (c <= 122))
+        return (1);
+    return (0);
+}
+
+int     ft_isalpha(int c)
+{
+    if (ft_isupper(c) || ft_islower(c))
+        return (1);
+    return (0);
+}
+
+int     ft_isdigit(int c)
+{
+    if ((c >= 48) && (c <= 57))
+        return (1);
+    return (0);
+}
+
+int     ft_isalnum(int c)
+{
+    if (ft_isalpha(c) || ft_isdigit(c))
+        return (1);
+    return (0);
+}
+
+int     ft_isascii(int c)
+{
+    if (c <= 127)
+        return (1);
+    return (0);
+}
+
+int     ft_isprint(int c)
+{
+    if ((c >= 32) && (c <= 126))
+        return (1);
+    return (0);
 }

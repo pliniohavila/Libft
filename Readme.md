@@ -29,13 +29,13 @@ Para o projeto há as seguintes restrições:
 |13|strnstr|X|
 |14|strncmp|X|
 |15|atoi| |
-|16|isalpha| |
-|17|isdigit| |
-|18|isalnum| |
-|19|isascii| |
-|20|isprint| |
-|21|toupper| |
-|22|tolower| |
+|16|isalpha|X|
+|17|isdigit|X|
+|18|isalnum|X|
+|19|isascii|X|
+|20|isprint|X|
+|21|toupper|X|
+|22|tolower|X|
 |23|calloc| |
 |24|strdup| |
 | |||
