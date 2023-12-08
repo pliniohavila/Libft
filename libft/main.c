@@ -15,7 +15,7 @@ int     main(void)
     strcpy(buf1, "Chaquita");
     // strcpy(buf2, "Chiquita");
     printf("[INFO]: %d\n", strncmp(buf1, buf1, 0));
-    printf("[INFO]: %d\n", ft_strncmp(buf1, buf1, 0));
+    // printf("[INFO]: %d\n", ft_strncmp(buf1, buf1, 0));
     return (0);
 }
 
