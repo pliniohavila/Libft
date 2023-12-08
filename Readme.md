@@ -7,6 +7,9 @@ Para o projeto há as seguintes restrições:
 1. Não pode utilizar variáveis globais 
 2. Não pode utilizar funções externas
 
+https://github.com/42School/norminette
+https://github.com/jtoty/Libftest.
+
 
 # Lista das funções 
 
@@ -34,8 +37,8 @@ Para o projeto há as seguintes restrições:
 |18|isalnum|X|
 |19|isascii|X|
 |20|isprint|X|
-|21|toupper|X|
-|22|tolower|X|
+|21|toupper| |
+|22|tolower| |
 |23|calloc| |
 |24|strdup| |
 | |||

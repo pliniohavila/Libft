@@ -1,6 +1,7 @@
 *.exe
 *.so
 *.o
+*.a
 ./vscode
 /vscode
 .vscode

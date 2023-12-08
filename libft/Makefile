@@ -1,35 +1,54 @@
 # local variables
 CC		= gcc
 FLAGS 	= -Wall -Wextra -Werror
+NAME 	= libft.a
+LIB 	= libft.h
+AR 		= ar rcs
 # -lbsd
 # -fsanitize=address
 
-# folders 
-# INCLUDE = ./includes
-# SRC 	= ./src
+SRC =   ft_bzero.c \
+		ft_isalnum.c \
+		ft_isalpha.c \
+		ft_isascii.c \
+		ft_isdigit.c \
+		ft_isprint.c \
+		ft_memccpy.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memset.c \
+		ft_strchr.c \
+		ft_strlcat.c \
+		ft_strlcpy.c \
+		ft_strlen.c \
+		ft_strncmp.c \
+		ft_strnstr.c \
+		ft_strrchr.c \
+
 
 #objects
-# OBJS 	= ft_putchar.o ft_swap.o ft_putstr.o ft_putstr.o ft_strlen.o ft_strcmp.o
+OBJS = $(SRC:.c=.o)
+BOBJS = $(BSRC:.c=.o)
 
-# rules
-# program:
-# 	$(CC) $(FLAGS) main.c -L . -l ft -I ./include -o main
+all:		$(NAME)
 
-# all: libft
-# 	ar rc libft.a $(SRC)/*.o $(INCLUDE)/*.h
+$(NAME): 	$(OBJS)
+	$(AR) $@ $^
 
-all:
+main:
 	$(CC) $(FLAGS) main.c -o main
 
-# libft: $(OBJS)
+$(NAME): 	$(OBJS)
+	$(AR) $@ $^
 
-# %.o: $(SRC)/%.c
-# 	$(CC) $(FLAGS) -c $< -o $(SRC)/$@
+clean:
+	rm -f $(OBJS) $(BOBJS)
 
-# clean:
-# 	rm -f $(SRC)/*.o
+fclean: 	clean
+	rm -f $(NAME)
 
-# fclean: clean
-# 	rm -f *.a
+re: 	fclean all
 
-# re: fclean all
+.PHONY: all clean fclean re
