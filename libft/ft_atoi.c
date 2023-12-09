@@ -22,6 +22,5 @@ int		ft_atoi(const char *nbr)
         r =  (r * 10) + (nbr[i] - 48);
         i++;
     }
-
     return (r * neg);
 }

@@ -9,96 +9,44 @@
 
 int     main(void)
 {
-    // char    buf1[SIZE];
-    // char    buf2[SIZE];
+    int    *buf1;
+    int    *buf2;
 
-    // memset(buf1, 0, SIZE);
-    // memset(buf2, 0, SIZE);
-    // strcpy(buf1, "A\na\rT z\ts");
-    // strcpy(buf2, "Chiquita");
-    // for (int i = 0; i < (int)ft_strlen(buf1); i++)
-    //     printf("Check[%c]: %d\n", buf1[i], ft_isblank(buf1[i]));
-    printf("[INFO] '': atoi[%d] - ft_atoi[%d]\n", atoi(""), ft_atoi(""));
-    printf("[INFO] '-+58': atoi[%d] - ft_atoi[%d]\n", atoi("-+58"), ft_atoi("-+58"));
-    printf("[INFO] '42': atoi[%d] - ft_atoi[%d]\n", atoi("42"), ft_atoi("42"));
-    printf("[INFO] '4': atoi[%d] - ft_atoi[%d]\n", atoi("4"), ft_atoi("4"));
-    printf("[INFO] '  -58a5': atoi[%d] - ft_atoi[%d]\n", atoi("  -58a5"), ft_atoi("  -58a5"));
-    printf("[INFO] 'aaa': atoi[%d] - ft_atoi[%d]\n", atoi("aaa"), ft_atoi("aaa"));
+    buf1 = (int*)calloc(10, sizeof(int));
+    buf2 = (int*)ft_calloc(10, sizeof(int));
+
+    printf("\nCom calloc: ");
+    for(int i = 0; i < 10; i++)
+        printf("%d ", buf1[i]);
+
+    printf("\nCom ft_calloc: ");
+    for(int i = 0; i < 10; i++)
+        printf("%d ", buf2[i]);
+
     return (0);
 }
 
-size_t      ft_strlen(const char *s)
+void    ft_bzero(void *s, size_t n)
 {
-    size_t      i;
+    size_t          i;
+    unsigned char   *buf;
 
     i = 0;
-    while (*s++)
-        i++;
-    return(i);
+    buf = (unsigned char*)s;
+    while(i < n)
+        buf[i++] = '\0';
+
+    return;
 }
 
-int     ft_isupper(int c)
+void 	*ft_calloc(size_t nelem, size_t elsize)
 {
-    if ((c >= 65) && (c <= 90))
-        return (1);
-    return (0);
-}
+    void    *ptr;
 
-int     ft_islower(int c)
-{
-    if ((c >= 97) && (c <= 122))
-        return (1);
-    return (0);
-}
-
-int     ft_isalpha(int c)
-{
-    if (ft_isupper(c) || ft_islower(c))
-        return (1);
-    return (0);
-}
-
-int     ft_isdigit(int c)
-{
-    if ((c >= 48) && (c <= 57))
-        return (1);
-    return (0);
-}
-
-int     ft_isalnum(int c)
-{
-    if (ft_isalpha(c) || ft_isdigit(c))
-        return (1);
-    return (0);
-}
-
-int 	ft_isblank(int c)
-{
-    return (((c >= 9) && (c <= 13)) || (c == 32));
-}
-
-int		ft_atoi(const char *nbr)
-{
-    int     i;
-    int     r;
-    int     neg;
-
-    i = 0;
-    r = 0;
-    neg = 1;
-    while (ft_isblank(nbr[i]))
-        i++;
-    if (nbr[i] == '-' || nbr[i] == '+')
-    {
-        if (nbr[i] == '-')
-            neg = (-1);
-        i++;
-    }
-    while (ft_isdigit(nbr[i]))
-    {
-        r =  (r * 10) + (nbr[i] - 48);
-        i++;
-    }
-
-    return (r * neg);
+    if ((nelem == 0) || (elsize == 0))
+        nelem = elsize = 0;
+    ptr = malloc(nelem * elsize);
+    if (ptr)
+        ft_bzero(ptr, nelem * elsize);
+    return (ptr);
 }

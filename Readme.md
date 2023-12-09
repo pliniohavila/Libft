@@ -40,7 +40,7 @@ bash grademe.sh
 |20|isprint|X|
 |21|toupper|X|
 |22|tolower|X|
-|23|calloc| |
+|23|calloc|X|
 |24|strdup| |
 | |||
 
