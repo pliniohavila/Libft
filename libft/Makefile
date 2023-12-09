@@ -37,6 +37,9 @@ all:		$(NAME)
 $(NAME): 	$(OBJS)
 	$(AR) $@ $^
 
+rmmain:
+	rm main
+
 main:
 	$(CC) $(FLAGS) main.c -o main
 

@@ -13,10 +13,10 @@ int     main(void)
 
     memset(buf1, 0, SIZE);
     // memset(buf2, 0, SIZE);
-    strcpy(buf1, "Aa-20 \nT5;9z");
-    // strcpy(buf2, "Chiquita"); 
-    printf("Check[%c]: %d\n", buf1[0], ft_isprint(buf1[0]));
-
+    strcpy(buf1, "AaTz");
+    // strcpy(buf2, "Chiquita");
+    for (int i = 0; i < (int)ft_strlen(buf1); i++)
+        printf("Check[%c]: %c\n", buf1[i], ft_tolower(buf1[i]));
     // printf("[INFO]: %d\n", strncmp(buf1, buf1, 0));
     // printf("[INFO]: %d\n", ft_strncmp(buf1, buf1, 0));
     return (0);
@@ -79,4 +79,17 @@ int     ft_isprint(int c)
     if ((c >= 32) && (c <= 126))
         return (1);
     return (0);
+}
+
+int 	ft_toupper(int c)
+{
+    if (ft_islower(c))
+        return (c - 32);
+    return (c);
+}
+int 	ft_tolower(int c)
+{
+    if (ft_isupper(c))
+        return (c + 32);
+    return (c);
 }

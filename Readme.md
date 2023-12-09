@@ -38,8 +38,8 @@ bash grademe.sh
 |18|isalnum|X|
 |19|isascii|X|
 |20|isprint|X|
-|21|toupper| |
-|22|tolower| |
+|21|toupper|X|
+|22|tolower|X|
 |23|calloc| |
 |24|strdup| |
 | |||
