@@ -32,7 +32,7 @@ bash grademe.sh
 |12|strrchr|X|
 |13|strnstr|X|
 |14|strncmp|X|
-|15|atoi| |
+|15|atoi|X|
 |16|isalpha|X|
 |17|isdigit|X|
 |18|isalnum|X|
