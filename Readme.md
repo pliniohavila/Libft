@@ -1,17 +1,18 @@
 # Libft
 
-Trata de um projeto cujo intuito é reescrever um conjunto de funções da 
+Trata de um projeto cujo intuito é reescrever um conjunto de funções da
 biblioteca `libc`, como definidas pelo `man`.
 
 Para o projeto há as seguintes restrições:
-1. Não pode utilizar variáveis globais 
+1. Não pode utilizar variáveis globais
 2. Não pode utilizar funções externas
 
 https://github.com/42School/norminette
-https://github.com/jtoty/Libftest.
+https://github.com/jtoty/Libftest
 
+bash grademe.sh
 
-# Lista das funções 
+# Lista das funções
 
 ## 1.º Parte
 
