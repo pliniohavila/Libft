@@ -30,5 +30,6 @@ int     ft_isdigit(int c);
 int     ft_isascii(int c);
 int     ft_isprint(int c);
 int 	ft_isblank(int c);
+char    *ft_strdup(const char *s);
 
 #endif
