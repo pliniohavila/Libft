@@ -26,6 +26,7 @@ SRC =   ft_atoi.c \
 		ft_memset.c \
 		ft_strchr.c \
 		ft_strdup.c \
+		ft_strdup.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
@@ -34,6 +35,7 @@ SRC =   ft_atoi.c \
 		ft_strrchr.c \
 		ft_toupper.c \
 		ft_tolower.c \
+		ft_substr.c \
 
 
 #objects
@@ -42,14 +44,11 @@ BOBJS = $(BSRC:.c=.o)
 
 all:		$(NAME)
 
-$(NAME): 	$(OBJS)
-	$(AR) $@ $^
-
-rmmain:
+del:
 	rm main
 
 main:
-	$(CC) $(FLAGS) main.c -o main
+	$(CC) $(FLAGS) main.c -L . -l ft -o main
 
 $(NAME): 	$(OBJS)
 	$(AR) $@ $^

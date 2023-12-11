@@ -1,33 +1,37 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 #include <stdlib.h>
 #include "libft.h"
 
 #define SIZE 30
 
-
 int     main(void)
 {
-    int    *buf1;
-    int    *buf2;
+    char    buf1[SIZE];
+    // char    buf2[SIZE];
 
-    buf1 = (int*)calloc(10, sizeof(int));
-    buf2 = (int*)ft_calloc(10, sizeof(int));
-
-    printf("\nCom calloc: ");
-    for(int i = 0; i < 10; i++)
-        printf("%d ", buf1[i]);
-
-    printf("\nCom ft_calloc: ");
-    for(int i = 0; i < 10; i++)
-        printf("%d ", buf2[i]);
-
+    memset(buf1, 0, SIZE);
+    // memset(buf2, 0, SIZE);
+    strcpy(buf1, "Yavana!");
+    // strcpy(buf2, "Yavana!");
+    printf("[INFO] %s\n", ft_substr(buf1, 0, 3));
+    printf("[INFO] %s\n", ft_substr(buf1, 3, 3));
+    printf("[INFO] %s\n", ft_substr(buf1, 4, 6));
+    // printf("[INFO] [ft_strdup]  %s\n", ft_strdup(buf2));
     return (0);
 }
 
-char 	*ft_strdup(const char *s)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
+    char        *str;
+    int         i;
 
+    if (!s)
+        return (NULL);
+    str = (char*)malloc(sizeof(char) * (len - (size_t)start));
+    s = s + start;
+    i = 0;
+    while (len-- > 0)
+        str[i++] = *s++;
+    return (str);
 }
-

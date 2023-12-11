@@ -32,5 +32,8 @@ int     ft_isprint(int c);
 int 	ft_isblank(int c);
 void 	*ft_calloc(size_t nelem, size_t elsize);
 char 	*ft_strdup(const char *s);
+char    *ft_strdup(const char *s);
+
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
