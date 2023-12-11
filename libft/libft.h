@@ -31,5 +31,6 @@ int     ft_isascii(int c);
 int     ft_isprint(int c);
 int 	ft_isblank(int c);
 void 	*ft_calloc(size_t nelem, size_t elsize);
+char 	*ft_strdup(const char *s);
 
 #endif

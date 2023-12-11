@@ -26,27 +26,8 @@ int     main(void)
     return (0);
 }
 
-void    ft_bzero(void *s, size_t n)
+char 	*ft_strdup(const char *s)
 {
-    size_t          i;
-    unsigned char   *buf;
 
-    i = 0;
-    buf = (unsigned char*)s;
-    while(i < n)
-        buf[i++] = '\0';
-
-    return;
 }
 
-void 	*ft_calloc(size_t nelem, size_t elsize)
-{
-    void    *ptr;
-
-    if ((nelem == 0) || (elsize == 0))
-        nelem = elsize = 0;
-    ptr = malloc(nelem * elsize);
-    if (ptr)
-        ft_bzero(ptr, nelem * elsize);
-    return (ptr);
-}
