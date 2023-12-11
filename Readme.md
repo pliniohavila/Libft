@@ -41,14 +41,14 @@ bash grademe.sh
 |21|toupper|X|
 |22|tolower|X|
 |23|calloc| |
-|24|strdup| |
+|24|strdup|X|
 | |||
 
 ## 2.º Parte
 
 |ID|Função|Reescrita|
 |---|---|---|
-|25|ft_substr| |
+|25|ft_substr|X|
 |26|ft_strjoin| |
 |27|ft_strtrim| |
 |28|ft_split| |

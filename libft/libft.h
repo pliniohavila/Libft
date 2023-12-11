@@ -32,4 +32,6 @@ int     ft_isprint(int c);
 int 	ft_isblank(int c);
 char    *ft_strdup(const char *s);
 
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+
 #endif
