@@ -1,6 +1,6 @@
 # local variables
 CC		= gcc
-FLAGS 	= -Wall -Wextra -Werror
+FLAGS 	= -Wall -Wextra -Werror -g3
 NAME 	= libft.a
 LIB 	= libft.h
 AR 		= ar rcs
@@ -42,13 +42,14 @@ SRC =   ft_atoi.c \
 OBJS = $(SRC:.c=.o)
 BOBJS = $(BSRC:.c=.o)
 
-all:		$(NAME)
+all: 		$(NAME)
 
 del:
-	rm main
+	rm main.out
 
 main:
-	$(CC) $(FLAGS) main.c -L . -l ft -o main
+	$(CC) $(FLAGS) main.c -L . -l ft -o main.out
+# gcc -Wall -Wextra -Werror -g3 main.c -L . -l ft -o main.out
 
 $(NAME): 	$(OBJS)
 	$(AR) $@ $^

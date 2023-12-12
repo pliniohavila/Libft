@@ -8,30 +8,29 @@
 int     main(void)
 {
     char    buf1[SIZE];
-    // char    buf2[SIZE];
+    char    buf2[SIZE];
 
     memset(buf1, 0, SIZE);
-    // memset(buf2, 0, SIZE);
-    strcpy(buf1, "Yavana!");
-    // strcpy(buf2, "Yavana!");
-    printf("[INFO] %s\n", ft_substr(buf1, 0, 3));
-    printf("[INFO] %s\n", ft_substr(buf1, 3, 3));
-    printf("[INFO] %s\n", ft_substr(buf1, 4, 6));
-    // printf("[INFO] [ft_strdup]  %s\n", ft_strdup(buf2));
+    memset(buf2, 0, SIZE);
+    strcpy(buf1, "Dmitry");
+    strcpy(buf2, " Karamazov");
+    printf("[INFO] %s\n", ft_strjoin(buf1, buf2));
     return (0);
 }
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char    *ft_strjoin(char const *s1, char const *s2)
 {
-    char        *str;
-    int         i;
+    char    *str;
+    char    str_len;
 
-    if (!s)
+    if (!s1 || !s2)
         return (NULL);
-    str = (char*)malloc(sizeof(char) * (len - (size_t)start));
-    s = s + start;
-    i = 0;
-    while (len-- > 0)
-        str[i++] = *s++;
+    str_len = ft_strlen(s1) + ft_strlen(s2);
+    printf("[DEBUG]: %d\n", (int)str_len);
+    str = (char*)malloc(sizeof(char) * str_len);
+    if (!str)
+        return (NULL);
+    ft_strlcpy(str, s1, ft_strlen(s1));
+    ft_strlcat(str, s2, ft_strlen(s2));
     return (str);
 }
