@@ -1,24 +1,5 @@
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include "libft.h"
-
-#define SIZE 30
-
-int     main(void)
-{
-    char    buf1[SIZE];
-    char    buf2[SIZE];
-
-    memset(buf1, 0, SIZE);
-    memset(buf2, 0, SIZE);
-    strcpy(buf1, " vtrKaramazov tr ");
-    strcpy(buf2, " vtr");
-    printf("[INFO] %s\n", buf1);
-    printf("[INFO] %s\n", ft_strtrim(buf1, buf2));
-    printf("|\n");
-    return (0);
-}
 
 char    *ft_strtrim(char const *s1, char const *set)
 {

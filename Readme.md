@@ -50,7 +50,7 @@ bash grademe.sh
 |---|---|---|
 |25|ft_substr|X|
 |26|ft_strjoin|X|
-|27|ft_strtrim| |
+|27|ft_strtrim|X|
 |28|ft_split| |
 |29|ft_itoa| |
 |30|t_strmap| |
