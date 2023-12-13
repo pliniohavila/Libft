@@ -49,7 +49,7 @@ bash grademe.sh
 |ID|Função|Reescrita|
 |---|---|---|
 |25|ft_substr|X|
-|26|ft_strjoin| |
+|26|ft_strjoin|X|
 |27|ft_strtrim| |
 |28|ft_split| |
 |29|ft_itoa| |
