@@ -1,26 +1,5 @@
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include "libft.h"
-
-#define SIZE 30
-
-int     main(void)
-{
-    char    *buf1 = "In this example, two arrays of 14 characters each are created. The contents of the string literals blah and hmm are copied into these arrays ";
-    char    **buf2;
-
-    // memset(buf1, 0, SIZE);
-    // memset(buf2, 0, SIZE);
-    // strcpy(buf2, " vtr");
-    buf2 = ft_split(buf1, 32);
-    for (int i = 0; buf2[i] != NULL; i++)
-        printf("%s - ", buf2[i]);
-    // printf("[INFO] %s\n", buf1);
-    // printf("[INFO] %s\n", ft_strtrim(buf1, buf2));
-    printf("\n");
-    return (0);
-}
 
 static int     get_qtd_split(char const *s, char c)
 {

@@ -51,7 +51,7 @@ bash grademe.sh
 |25|ft_substr|X|
 |26|ft_strjoin|X|
 |27|ft_strtrim|X|
-|28|ft_split| |
+|28|ft_split|X|
 |29|ft_itoa| |
 |30|t_strmap| |
 |31|ft_putchar_fd| |
