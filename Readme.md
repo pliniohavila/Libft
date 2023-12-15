@@ -52,11 +52,12 @@ bash grademe.sh
 |26|ft_strjoin|X|
 |27|ft_strtrim|X|
 |28|ft_split|X|
-|29|ft_itoa| |
-|30|t_strmap| |
-|31|ft_putchar_fd| |
-|32|ft_putstr_fd| |
-|33|ft_putendl_fd| |
-|34|ft_putnbr_fd| |
+|29|ft_itoa|X|
+|30|t_strmap|X|
+|31|ft_putchar_fd|X|
+|32|ft_putstr_fd|X|
+|33|ft_putendl_fd|X|
+|34|ft_putnbr_fd|X|
 | |||
 
+Optei por não implementar o bônus, por ora. 
